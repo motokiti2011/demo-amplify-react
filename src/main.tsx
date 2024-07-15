@@ -1,21 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-// import App from "./App.tsx";
+import { BrowserRouter } from 'react-router-dom'; // 追加する
+import "./index.css";
+import { AppRoutes } from "./Routes.tsx";
+/** local起動でエラーになるため一時的にコメントアウト */
 import { Amplify } from "aws-amplify";
 import outputs from "../amplify_outputs.json";
-import "./index.css";
 
-import { BrowserRouter } from 'react-router-dom'; // 追加する
-import { AppRoutes } from "./Routes.tsx";
-
-
+/** local起動でエラーになるため一時的にコメントアウト */
 Amplify.configure(outputs);
-
-// ReactDOM.createRoot(document.getElementById("root")!).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
